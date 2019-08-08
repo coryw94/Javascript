@@ -1,0 +1,13 @@
+function subtract(callback) {
+    var numOne = prompt('Enter the first number'); // Enter 1st number
+    var numTwo = prompt('Enter the second number'); // Enter 2nd number
+    var result = numOne - numTwo; // Subtract the first number from the 2nd
+    callback(result); // Get displayResults function to show the results 
+}
+​
+// Setting the subtract function as a parameter here gets the displayResults function to show the result of numOne - numTwo because of the callback function's passing of "result" as an argument. 
+function displayResults(subtract){ 
+    alert('The result is ' + subtract);
+}
+​
+subtract(displayResults); // Invokes the subtract function and gets it to show the result. 
